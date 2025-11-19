@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz App With Levels</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- LEVEL SELECTION -->
+    <div id="levelScreen">
+      <h1>Select Level</h1>
+      <button class="btn levelBtn" data-level="easy">Level 1 - Easy</button>
+      <button class="btn levelBtn" data-level="medium">Level 2 - Medium</button>
+      <button class="btn levelBtn" data-level="hard">Level 3 - Hard</button>
+    </div>
+
+    <!-- QUIZ AREA -->
+    <div id="quizArea" class="hidden">
+      <h2 id="levelTitle"></h2>
+
+      <p class="question" id="question">Loading...</p>
+      
+
+      <div class="answers" id="answers"></div>
+
+      <div class="controls">
+        <div class="timer">
+          <div class="progress"><i id="timeBar"></i></div>
+          <div class="chip" id="timeLeft">--s</div>
+        </div>
+      </div>
+
+      <div class="footer">
+        <div class="score">Score: <span id="score">0</span></div>
+        <div class="chip">Q <span id="current">0</span> / <span id="total">0</span></div>
+      </div>
+    </div>
+
+    <!-- RESULT -->
+    <div id="resultArea" class="hidden">
+      <h2>Level Completed!</h2>
+      <p>Your Score</p>
+      <div id="finalScore" class="finalScore"></div>
+      <button class="btn" id="backLevels">Back to Levels</button>
+      <button class="btn ghost" id="restartBtn">Retry Level</button>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
